@@ -7,6 +7,7 @@ import { ProgressComponent } from './pages/progress/progress.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
+import { RolesComponent } from './pages/roles/roles.component';
 
 
 
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
         children: [
             { path: 'dashboard', component: DashboardComponent },
             { path: 'progress', component: ProgressComponent },
+            { path: 'roles', component: RolesComponent },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     },
