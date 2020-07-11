@@ -35,6 +35,8 @@ public class PersonaRepositorio{
             ObjListPersona.add(objPersona);
             PacienteE objPersona2= new PacienteE(455,"2020/10/21","F","Casado","taxista","Loja",8497852,"O+");
             ObjListPersona.add(objPersona2);
+            PacienteE objPersona3= new PacienteE(385,"2020/10/21","M","Veodo","Gigolo","Loja",8777852,"O+");
+            ObjListPersona.add(objPersona2);
             
      //   }     
         return ObjListPersona; //To change body of generated methods, choose Tools | Templates.
