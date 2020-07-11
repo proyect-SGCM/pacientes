@@ -27,12 +27,18 @@ public class PersonaRepositorio{
     }
     
     public List<PacienteE> listar() {
-        List<Pacientes> personadb=objContUsu.findPacientesEntities();
+       // List<Pacientes> personadb=objContUsu.findPacientesEntities();
         List<PacienteE> ObjListPersona= new ArrayList<PacienteE>();
-        for (Pacientes pacientesdb : personadb) {
-            PacienteE objPersona= new PacienteE(pacientesdb.getIdPacientes(),pacientesdb.getFechaNacimiento(),pacientesdb.getSexo(),pacientesdb.getEstadoCivil(),pacientesdb.getOcupacion(),pacientesdb.getDireccion(),pacientesdb.getTelefono(),pacientesdb.getTipoSangre());
+    //    for (Pacientes pacientesdb : personadb) {
+       //     PacienteE objPersona= new PacienteE(pacientesdb.getIdPacientes(),pacientesdb.getFechaNacimiento(),pacientesdb.getSexo(),pacientesdb.getEstadoCivil(),pacientesdb.getOcupacion(),pacientesdb.getDireccion(),pacientesdb.getTelefono(),pacientesdb.getTipoSangre());
+  	    PacienteE objPersona= new PacienteE(4565,"2020/05/21","M","Soltero","Programador","Loja",8465852,"O+");
             ObjListPersona.add(objPersona);
-        }     
+            PacienteE objPersona2= new PacienteE(455,"2020/10/21","F","Casado","taxista","Loja",8497852,"O+");
+            ObjListPersona.add(objPersona2);
+            PacienteE objPersona3= new PacienteE(385,"2020/10/21","M","Veodo","Gigolo","Loja",8777852,"O+");
+            ObjListPersona.add(objPersona2);         
+            ObjListPersona.add(objPersona);
+     //   }     
         return ObjListPersona; //To change body of generated methods, choose Tools | Templates.
     }
 
