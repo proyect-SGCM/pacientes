@@ -5,8 +5,17 @@
     <class>com.Marlon.backend.controllers.Personas</class>
     <class>com.Marlon.backend.entities.Personas</class>
     <class>com.Marlon.backend.persistence.entities.Personasdb</class>
+    <class>com.Marlon.backend.persistence.entities.Usuarios</class>
+    <class>com.Marlon.backend.persistence.entities.Roles</class>
+    <class>com.Marlon.backend.persistence.entities.Especialidad</class>
+    <class>com.Marlon.backend.persistence.entities.Examenes</class>
+    <class>com.Marlon.backend.persistence.entities.Recetas</class>
+    <class>com.Marlon.backend.persistence.entities.Medicos</class>
+    <class>com.Marlon.backend.persistence.entities.Citas</class>
+    <class>com.Marlon.backend.persistence.entities.Pacientes</class>
+    <class>com.Marlon.backend.persistence.entities.Historiaclinica</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ejemplo?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sgcm?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value=""/>

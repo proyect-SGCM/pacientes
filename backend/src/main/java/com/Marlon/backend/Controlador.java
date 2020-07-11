@@ -6,6 +6,7 @@
 package com.Marlon.backend;
 
 import com.Marlon.backend.Interfaces.PersonaService;
+import com.Marlon.backend.domain.entities.PacienteE;
 import com.Marlon.backend.domain.entities.Persona;
 import com.Marlon.backend.domain.usecase.CrearPersona;
 import com.Marlon.backend.persistence.repositorio.PersonaRepositorio;
@@ -34,27 +35,29 @@ public class Controlador {
     @Autowired
     
    // @GetMapping//(method=RequestMethod.GET)
+    @RequestMapping(value="/pacientes",method = RequestMethod.GET)
+    public List<PacienteE>listar(){
+        PersonaService objPersonaService = new CrearPersona();
+        PersonaRepositorio objPersonaRepositorio=new PersonaRepositorio(objPersonaService);
+        return objPersonaRepositorio.listar();
+    }
+    /*
     @RequestMapping(value="/personas",method = RequestMethod.GET)
     public List<Persona>listar(){
         PersonaService objPersonaService = new CrearPersona();
         PersonaRepositorio objPersonaRepositorio=new PersonaRepositorio(objPersonaService);
         return objPersonaRepositorio.listar();
     }
-     
-    @RequestMapping(value="/upersonas",method=RequestMethod.POST)
-    public boolean agregar(Persona p){
+     */
+    @RequestMapping(value="/paciente",method=RequestMethod.POST)
+    public boolean agregar(PacienteE p){
             boolean g=false;
-            System.out.println(p.getApellidos());
-            /*
-        try {
-            JSONObject jsonObject = new JSONObject(p);
+
             PersonaService objPersonaService = new CrearPersona();
-            objPersonaService.add(jsonObject);
+           // objPersonaService.add(jsonObject);
             PersonaRepositorio objPersonaRepositorio=new PersonaRepositorio(objPersonaService);
-            g=objPersonaRepositorio.addRepositorio();
-         }catch (JSONException err){
-            System.out.println("error transformacion");
-         }*/
+            g=objPersonaRepositorio.addRepositorio(p);
+        
          return g;//service.add(p);
     }
 
